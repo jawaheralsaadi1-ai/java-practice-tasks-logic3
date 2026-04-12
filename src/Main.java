@@ -10,6 +10,8 @@ System.out.println("Task 1 : Result : " + makeBricks(3, 1, 8));
     System.out.println("Task 3 : Result : " + blackJack(19, 22));
     //Task 4
     System.out.println("Task 4 : Result : " + loneSum(1, 2, 3));
+    // Task 5
+    System.out.println("Task 5 : Result : " + roundSum(12, 13, 14));
 
 }
 
@@ -48,3 +50,12 @@ public static int loneSum ( int a, int b, int c) {
     if ( a == b || a == c) return sum+=a;
     return sum;
 }
+// Task 5 Method :
+public static int roundSum ( int a, int b, int c) {
+    return round10(a) + round10(b) + round10(c);
+}
+ public static int round10 ( int num) {
+    int rem = num % 10;
+    if (rem >= 5) return num + (rem - 10);
+    return num - rem;
+ }
