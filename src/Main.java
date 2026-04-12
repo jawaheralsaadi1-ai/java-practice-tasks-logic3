@@ -8,8 +8,8 @@ System.out.println("Task 1 : Result : " + makeBricks(3, 1, 8));
     System.out.println("Task 2 : Result : " + noTeenSum(2, 1, 14));
     //Task 3
     System.out.println("Task 3 : Result : " + blackJack(19, 22));
-
     //Task 4
+    System.out.println("Task 4 : Result : " + loneSum(1, 2, 3));
 
 }
 
@@ -40,6 +40,11 @@ public static int noTeenSum(int a, int b, int c) {
     }
    return Math.max( a , b);
 
-
-
     }
+    // Task 4 Method :
+public static int loneSum ( int a, int b, int c) {
+     int sum = a + b + c;
+    if ( a == b && a == c) return 0;
+    if ( a == b || a == c) return sum+=a;
+    return sum;
+}
