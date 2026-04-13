@@ -12,6 +12,8 @@ System.out.println("Task 1 : Result : " + makeBricks(3, 1, 8));
     System.out.println("Task 4 : Result : " + loneSum(1, 2, 3));
     // Task 5
     System.out.println("Task 5 : Result : " + roundSum(12, 13, 14));
+// Task 6
+    System.out.println("Task 6 : Result : " + evenlySpaced(4, 6, 3));
 
 }
 
@@ -58,4 +60,14 @@ public static int roundSum ( int a, int b, int c) {
     int rem = num % 10;
     if (rem >= 5) return num + (rem - 10);
     return num - rem;
+ }
+ // Task 6 Method
+ public static boolean evenlySpaced ( int a, int b, int c) {
+     int large = Math.min(a, Math.min(b, c));
+     int[] nums = {a, b, c};
+     java.util.Arrays.sort(nums);
+     int diff1 = nums[1] - nums[0];
+     int diff2 = nums[2] - nums[1];
+     return diff2 == diff1;
+
  }
